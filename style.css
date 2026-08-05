@@ -402,6 +402,61 @@ box-shadow:0 10px 25px rgba(0,0,0,.1);
     border-radius:8px;
     cursor:pointer;
 }
+/* Filter Section */
+
+.filter-section{
+
+    padding:80px 8%;
+    background:white;
+    text-align:center;
+
+}
+
+.filter-section h2{
+
+    font-size:38px;
+    color:#0b245b;
+    margin-bottom:40px;
+
+}
+
+.filter-box{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.filter-box input,
+.filter-box select{
+
+    padding:15px;
+    width:250px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+
+}
+
+.filter-box button{
+
+    padding:15px 35px;
+    background:#ff8c00;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+.filter-box button:hover{
+
+    background:#ff6f00;
+
+}
 
 .scheme-footer button:hover{
     background:#ff6f00;
