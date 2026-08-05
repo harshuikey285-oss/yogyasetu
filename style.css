@@ -229,3 +229,41 @@ text-align:center;
 width:140px;
 box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
+.category-section{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:#fff;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    cursor:pointer;
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.category-card span{
+    font-size:45px;
+}
+
+.category-card h3{
+    margin-top:15px;
+    font-size:22px;
+    color:#1b2d5c;
+}
+
+.category-card p{
+    color:#666;
+    margin-top:10px;
+    font-size:15px;
+}
