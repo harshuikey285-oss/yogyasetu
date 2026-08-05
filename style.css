@@ -461,3 +461,78 @@ box-shadow:0 10px 25px rgba(0,0,0,.1);
 .scheme-footer button:hover{
     background:#ff6f00;
 }
+.latest-section{
+
+padding:80px 8%;
+
+background:#eef4fb;
+
+}
+
+.latest-section h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:40px;
+
+color:#12315f;
+
+}
+
+#latestSchemes{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+}
+
+.latest-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.latest-card h3{
+
+color:#0b245b;
+
+margin-bottom:15px;
+
+}
+
+.latest-card p{
+
+margin:8px 0;
+
+color:#555;
+
+}
+
+.latest-card button{
+
+margin-top:15px;
+
+background:#ff7b00;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
