@@ -21,3 +21,17 @@ document.querySelectorAll(".category-card").forEach(card => {
     });
 
 });
+document.getElementById("filterBtn").addEventListener("click",function(){
+
+let search=document.getElementById("searchInput").value;
+let category=document.getElementById("categoryFilter").value;
+let state=document.getElementById("stateFilter").value;
+
+alert(
+"Searching...\n\n"+
+"Keyword : "+search+
+"\nCategory : "+category+
+"\nState : "+state
+);
+
+});
