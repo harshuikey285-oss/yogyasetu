@@ -1,103 +1,58 @@
 const schemes = [
 
 {
+id:1,
 name:"PM Kisan Samman Nidhi",
 category:"Farmers",
+state:"All India",
 type:"Central",
-eligibility:"Small & Marginal Farmers",
-link:"https://pmkisan.gov.in/"
+benefit:"₹6000 Financial Assistance",
+description:"Financial support for eligible farmers.",
+link:"#"
 },
 
 {
+id:2,
+name:"Ayushman Bharat",
+category:"Health",
+state:"All India",
+type:"Central",
+benefit:"₹5 Lakh Health Insurance",
+description:"Cashless treatment in empanelled hospitals.",
+link:"#"
+},
+
+{
+id:3,
 name:"PM Awas Yojana",
-category:"Women",
+category:"Housing",
+state:"All India",
 type:"Central",
-eligibility:"EWS / LIG Families",
-link:"https://pmaymis.gov.in/"
+benefit:"Affordable Housing",
+description:"Housing assistance for eligible families.",
+link:"#"
 },
 
 {
-name:"NSP Scholarship",
+id:4,
+name:"National Scholarship Portal",
 category:"Students",
+state:"All India",
 type:"Central",
-eligibility:"Students",
-link:"https://scholarships.gov.in/"
+benefit:"Scholarship",
+description:"Scholarship for eligible students.",
+link:"#"
 },
 
 {
-name:"Atal Pension Yojana",
-category:"Senior Citizen",
-type:"Central",
-eligibility:"18-40 Years",
-link:"https://www.npscra.nsdl.co.in/"
-},
-
-{
-name:"Accessible India Campaign",
-category:"Disabled",
-type:"Central",
-eligibility:"Persons with Disabilities",
-link:"https://depwd.gov.in/"
+id:5,
+name:"Ladli Behna Yojana",
+category:"Women",
+state:"Madhya Pradesh",
+type:"State",
+benefit:"Monthly Financial Support",
+description:"Financial support for women.",
+link:"#"
 }
 
 ];
-
-const params=new URLSearchParams(window.location.search);
-
-const category=params.get("category");
-
-document.getElementById("categoryTitle").innerHTML=category+" Schemes";
-
-displaySchemes(category);
-
-document.getElementById("searchBox").addEventListener("keyup",function(){
-
-let keyword=this.value.toLowerCase();
-
-let filtered=schemes.filter(s=>s.category===category && s.name.toLowerCase().includes(keyword));
-
-showCards(filtered);
-
-});
-
-function displaySchemes(cat){
-
-let filtered=schemes.filter(s=>s.category===cat);
-
-showCards(filtered);
-
-}
-
-function showCards(data){
-
-const container=document.getElementById("schemeContainer");
-
-container.innerHTML="";
-
-data.forEach(scheme=>{
-
-container.innerHTML+=`
-
-<div class="scheme-card">
-
-<h2>${scheme.name}</h2>
-
-<p><b>Category:</b> ${scheme.category}</p>
-
-<p><b>Type:</b> ${scheme.type}</p>
-
-<p><b>Eligibility:</b> ${scheme.eligibility}</p>
-
-<a href="${scheme.link}" target="_blank">
-
-<button>Apply Now</button>
-
-</a>
-
-</div>
-
-`;
-
-});
-
-}
