@@ -66,3 +66,60 @@ container.innerHTML+=`
 }
 
 loadLatestSchemes();
+document.getElementById("filterBtn").addEventListener("click", filterSchemes);
+
+function filterSchemes() {
+
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    const category = document.getElementById("categoryFilter").value;
+    const state = document.getElementById("stateFilter").value;
+
+    const container = document.getElementById("latestSchemes");
+    container.innerHTML = "";
+
+    const filtered = schemes.filter(item => {
+
+        const matchKeyword =
+            item.name.toLowerCase().includes(keyword);
+
+        const matchCategory =
+            category === "" || item.category === category;
+
+        const matchState =
+            state === "" || item.state === state;
+
+        return matchKeyword && matchCategory && matchState;
+
+    });
+
+    if(filtered.length===0){
+
+        container.innerHTML="<h3>No Scheme Found</h3>";
+
+        return;
+
+    }
+
+    filtered.forEach(item=>{
+
+        container.innerHTML += `
+
+        <div class="latest-card">
+
+            <h3>${item.name}</h3>
+
+            <p><strong>Category:</strong> ${item.category}</p>
+
+            <p><strong>State:</strong> ${item.state}</p>
+
+            <p>${item.description}</p>
+
+            <button>View Details</button>
+
+        </div>
+
+        `;
+
+    });
+
+}
