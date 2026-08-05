@@ -35,3 +35,34 @@ alert(
 );
 
 });
+function loadLatestSchemes(){
+
+const container=document.getElementById("latestSchemes");
+
+if(!container) return;
+
+schemes.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="latest-card">
+
+<h3>${item.name}</h3>
+
+<p><strong>Category:</strong> ${item.category}</p>
+
+<p><strong>State:</strong> ${item.state}</p>
+
+<p>${item.description}</p>
+
+<button>View Details</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+loadLatestSchemes();
